@@ -1,42 +1,42 @@
-aclPath: "./whitelist.yml"
+aclPath: "./whitelist.yml" #don't change unless you know what you're doing!
 
-logger:
-    path: "./logs/"
+logger: 
+    path: "./logs/" #log file path
 
-reporter:
+reporter: #API for the dashboard, leave to true if you plan on using the dashboard and false if you're not
     ip: 127.0.0.1
     port: 3000
-    enabled: false
+    enabled: true
 
-rest:
+rest: #rest API, don't mess with this unless you know what you're doing
     ip: 127.0.0.1
     port: 8080
     password: "password"
-    enabled: true
+    enabled: false
 
 reflectors:
-  p25:
-    enabled: true
+  p25: #P25 reflector, set to true if you want this 
+    enabled: false
     acl: false
-    networkPort: 32010
+    networkPort: 41000
     networkTimeout: 3600000
     networkDebug: false
 
-  nxdn:
-    enabled: true
+  nxdn: #NXDN reflector, set to true if you want this
+    enabled: false
     acl: false
-    networkPort: 32020
+    networkPort: 41040
     networkDebug: false
     targetGroup: 1
 
-  ysf:
-    enabled: true
+  ysf: #YSF reflector, set to true if you want this
+    enabled: false
     acl: false
-    networkPort: 32030
+    networkPort: 42000
     networkDebug: true
 
-  m17:
-    enabled: true
+  m17: #M17 reflector, set to true if you want this
+    enabled: false
     acl: false
     networkPort: 12345
     reflector: "001" # This is the three characters after "M17-"; for example if you are M17-ABC the value for this config would be ABC
