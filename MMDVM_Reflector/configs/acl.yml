@@ -1,3 +1,5 @@
+#this is the whitelist, copy/paste lines in to block or allow a certain station, BETA
+
 - allowed: true
   callsign: N0PE
   rid: 123456
